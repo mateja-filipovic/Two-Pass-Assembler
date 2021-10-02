@@ -15,11 +15,7 @@ a symbol table, relocation data and machine code
 * docs folder contains a word document that explains how the algorithm works
 
 ## Usage
-The project should be compiled using the provided makefile
-Input and output files must be provided when running the assembler
-The output file will be created automatically if it doesn't exist
+The project should be compiled using the provided makefile <br/>
+Input and output files must be provided when running the assembler<br/>
+The output file will be created automatically if it doesn't exist<br/>
 Ex: ./assembler -o output.txt input.s
-
-### To do:
-1. Change relocation offset when using symbols and 5B instructions
-2. Write docs
