@@ -1,0 +1,25 @@
+
+
+# Two Pass Assembler
+A course project for "System software". This is an implementation of a two pass assembler that converts an assembly program into machine code.
+
+## Some important notes
+* the project is compiled using g++ and tested on ubuntu
+* the assembly language used is x86-like, described in docs
+* the output is a file structured like an ELF object file, containing
+a symbol table, relocation data and machine code
+
+## Project structure
+* inc and src folders contain the code
+* tests folder contains example inputs
+* docs folder contains a word document that explains how the algorithm works
+
+## Usage
+The project should be compiled using the provided makefile
+Input and output files must be provided when running the assembler
+The output file will be created automatically if it doesn't exist
+Ex: ./assembler -o output.txt input.s
+
+### To do:
+1. Change relocation offset when using symbols and 5B instructions
+2. Write docs
