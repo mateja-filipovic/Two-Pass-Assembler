@@ -5,7 +5,7 @@ A course project for "System software". This is an implementation of a two pass 
 
 ## Some important notes
 * the project is compiled using g++ and tested on ubuntu
-* the assembly language used is x86-like, described in docs
+* the assembly language used is x86-like, and supports sections, directives and some instructions with various addressing modes
 * the output is a file structured like an ELF object file, containing
 a symbol table, relocation data and machine code
 
