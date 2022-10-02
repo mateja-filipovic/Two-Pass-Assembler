@@ -163,32 +163,32 @@ private:
 
 
     // regexes used
-    const std::regex WORD_LITERAL_REGEX{"^(([0-9]+)|(0[xX][0-9A-Fa-f]+))$"};
-    const std::regex WORD_SYMBOL_REGEX{"^[a-zA-Z]\\w*$"};
+    static const std::regex WORD_LITERAL_REGEX;
+    static const std::regex WORD_SYMBOL_REGEX;
 
-    const std::regex REGISTER_INSTRUCTION_REGEX{"^r[0-5]$"};
+    static const std::regex REGISTER_INSTRUCTION_REGEX;
 
     // branch and call addressing modes and formats
-    const std::regex BRANCH_LITERAL_REGEX{"^(([0-9]+)|(0[xX][0-9A-Fa-f]+))$"};
-    const std::regex BRANCH_SYMBOL_REGEX{"^[a-zA-Z]\\w*$"};
-    const std::regex BRANCH_PCREL_REGEX{"^%[a-zA-Z]\\w*$"};
-    const std::regex BRANCH_MEMLITERAL_REGEX{"^\\*(([0-9]+)|(0[xX][0-9A-Fa-f]+))$"};
-    const std::regex BRANCH_MEMSYMBOL_REGEX{"^\\*[a-zA-Z]\\w*$"};
-    const std::regex BRANCH_REGDIR_REGEX{"^\\*r[0-7]$"};
-    const std::regex BRANCH_REGIND_REGEX{"^\\*\\[r[0-7]\\]$"};   
-    const std::regex BRANCH_LITERALREGIND_REGEX{"^\\*\\[r[0-7]\\s?\\+\\s?(([0-9]+)|(0[xX][0-9A-Fa-f]+))\\]$"};   
-    const std::regex BRANCH_SYMBOLREGIND_REGEX{"^\\*\\[r[0-7]\\s?\\+\\s?[a-zA-Z]\\w*\\]$"}; 
+    static const std::regex BRANCH_LITERAL_REGEX;
+    static const std::regex BRANCH_SYMBOL_REGEX;
+    static const std::regex BRANCH_PCREL_REGEX;
+    static const std::regex BRANCH_MEMLITERAL_REGEX;
+    static const std::regex BRANCH_MEMSYMBOL_REGEX;
+    static const std::regex BRANCH_REGDIR_REGEX;
+    static const std::regex BRANCH_REGIND_REGEX; 
+    static const std::regex BRANCH_LITERALREGIND_REGEX; 
+    static const std::regex BRANCH_SYMBOLREGIND_REGEX;
 
     // load store addressing modes and formats
-    const std::regex LS_LITERAL_REGEX{"^\\$(([0-9]+)|(0[xX][0-9A-Fa-f]+))$"};
-    const std::regex LS_SYMBOL_REGEX{"^\\$[a-zA-Z]\\w*$"};
-    const std::regex LS_MEMLITERAL_REGEX{"^(([0-9]+)|(0[xX][0-9A-Fa-f]+))$"};
-    const std::regex LS_MEMSYMBOL_REGEX{"^[a-zA-Z]\\w*$"};
-    const std::regex LS_PCRELSYMBOL_REGEX{"^%[a-zA-Z]\\w*$"};
-    const std::regex LS_REGDIR_REGEX{"^r[0-7]$"};
-    const std::regex LS_REGIND_REGEX{"^\\[r[0-7]\\]$"};   
-    const std::regex LS_LITERALREGIND_REGEX{"^\\[r[0-7]\\s?\\+\\s?(([0-9]+)|(0[xX][0-9A-Fa-f]+))\\]$"};   
-    const std::regex LS_SYMBOLREGIND_REGEX{"^\\[r[0-7]\\s?\\+\\s?[a-zA-Z]\\w*\\]$"};  
+    static const std::regex LS_LITERAL_REGEX;
+    static const std::regex LS_SYMBOL_REGEX;
+    static const std::regex LS_MEMLITERAL_REGEX;
+    static const std::regex LS_MEMSYMBOL_REGEX;
+    static const std::regex LS_PCRELSYMBOL_REGEX;
+    static const std::regex LS_REGDIR_REGEX;
+    static const std::regex LS_REGIND_REGEX;   
+    static const std::regex LS_LITERALREGIND_REGEX;   
+    static const std::regex LS_SYMBOLREGIND_REGEX;  
 
 
 };

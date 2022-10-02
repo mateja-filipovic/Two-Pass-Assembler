@@ -1,5 +1,5 @@
 asembler: main.o assembler.o parser.o
-	g++ main.o assembler.o parser.o -o asembler
+	g++ main.o assembler.o parser.o -o assembler
 
 main.o: src/main.cpp
 	g++ -c src/main.cpp
@@ -11,4 +11,4 @@ parser.o: src/parser.cpp
 	g++ -c src/parser.cpp
 
 clean:
-	rm *.o asembler
+	rm *.o assembler

@@ -1240,7 +1240,7 @@ void Assembler::mem_handler_sp()
 void Assembler::print_reloc(std::ofstream& outfile)
 {
     std::vector<std::string> names;
-    std::vector<std::vector<int>> indexes;
+    std::vector< std::vector<int> > indexes;
     for(int i = 0; i < relocation_table.size(); i++)
     {
         RelRecord* rel = relocation_table.at(i);
@@ -1302,3 +1302,30 @@ void Assembler::print_data()
 
     outfile.close();
 }
+
+    const std::regex Assembler::WORD_LITERAL_REGEX("^(([0-9]+)|(0[xX][0-9A-Fa-f]+))$");
+    const std::regex Assembler::WORD_SYMBOL_REGEX("^[a-zA-Z]\\w*$");
+
+    const std::regex Assembler::REGISTER_INSTRUCTION_REGEX("^r[0-5]$");
+
+    // branch and call addressing modes and formats
+    const std::regex Assembler::BRANCH_LITERAL_REGEX("^(([0-9]+)|(0[xX][0-9A-Fa-f]+))$");
+    const std::regex Assembler::BRANCH_SYMBOL_REGEX("^[a-zA-Z]\\w*$");
+    const std::regex Assembler::BRANCH_PCREL_REGEX("^%[a-zA-Z]\\w*$");
+    const std::regex Assembler::BRANCH_MEMLITERAL_REGEX("^\\*(([0-9]+)|(0[xX][0-9A-Fa-f]+))$");
+    const std::regex Assembler::BRANCH_MEMSYMBOL_REGEX("^\\*[a-zA-Z]\\w*$");
+    const std::regex Assembler::BRANCH_REGDIR_REGEX("^\\*r[0-7]$");
+    const std::regex Assembler::BRANCH_REGIND_REGEX("^\\*\\[r[0-7]\\]$");   
+    const std::regex Assembler::BRANCH_LITERALREGIND_REGEX("^\\*\\[r[0-7]\\s?\\+\\s?(([0-9]+)|(0[xX][0-9A-Fa-f]+))\\]$");   
+    const std::regex Assembler::BRANCH_SYMBOLREGIND_REGEX("^\\*\\[r[0-7]\\s?\\+\\s?[a-zA-Z]\\w*\\]$"); 
+
+    // load store addressing modes and formats
+    const std::regex Assembler::LS_LITERAL_REGEX("^\\$(([0-9]+)|(0[xX][0-9A-Fa-f]+))$");
+    const std::regex Assembler::LS_SYMBOL_REGEX("^\\$[a-zA-Z]\\w*$");
+    const std::regex Assembler::LS_MEMLITERAL_REGEX("^(([0-9]+)|(0[xX][0-9A-Fa-f]+))$");
+    const std::regex Assembler::LS_MEMSYMBOL_REGEX("^[a-zA-Z]\\w*$");
+    const std::regex Assembler::LS_PCRELSYMBOL_REGEX("^%[a-zA-Z]\\w*$");
+    const std::regex Assembler::LS_REGDIR_REGEX("^r[0-7]$");
+    const std::regex Assembler::LS_REGIND_REGEX("^\\[r[0-7]\\]$");   
+    const std::regex Assembler::LS_LITERALREGIND_REGEX("^\\[r[0-7]\\s?\\+\\s?(([0-9]+)|(0[xX][0-9A-Fa-f]+))\\]$");   
+    const std::regex Assembler::LS_SYMBOLREGIND_REGEX("^\\[r[0-7]\\s?\\+\\s?[a-zA-Z]\\w*\\]$"); 

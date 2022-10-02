@@ -1,21 +1,27 @@
 
 
 # Two Pass Assembler
-A course project for "System software". This is an implementation of a two pass assembler that converts an assembly program into machine code.
+An implementation of a two pass assemblerr, that converts code written in assembly to machine code. The assembly language used is x86-like - it supports sections, directives and instructions with various addressing modes.
 
 ## Some important notes
-* the project is compiled using g++ and tested on ubuntu
-* the assembly language used is x86-like, and supports sections, directives and some instructions with various addressing modes
-* the output is a file structured like an ELF object file, containing
+* the project is compiled using `g++` and tested on ubuntu
+* the output is a file structured like an `ELF` object file, containing
 a symbol table, relocation data and machine code
 
 ## Project structure
-* inc and src folders contain the code
-* tests folder contains example inputs
-* docs folder contains a word document that explains how the algorithm works
+* `inc` and `src` folders contain the code
+* `tests` folder contains examples written in assembly
+* `docs` folder contains some implementation details and useful info
 
 ## Usage
-The project should be compiled using the provided makefile <br/>
-Input and output files must be provided when running the assembler<br/>
-The output file will be created automatically if it doesn't exist<br/>
-Ex: ./assembler -o output.txt input.s
+- clone the project using
+    ``` bash
+    git clone https://github.com/mateja-filipovic/Two-Pass-Assembler.git
+    ```
+- compile the project using the provided `makefile` (make sure you have g++ installed first)
+- provide paths to input and output files as command line arguments
+    ```bash
+    ./assembler -o elf_output.txt tests/test_one.s
+    ```
+    - the output file will be created automatically if it doesn't exist
+- you can now inspect the `elf_output` file containing the machine code
