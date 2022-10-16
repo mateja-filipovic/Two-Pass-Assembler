@@ -1,7 +1,7 @@
 
 
 # Two Pass Assembler
-An implementation of a two pass assemblerr, that converts code written in assembly to machine code. The assembly language used is x86-like - it supports sections, directives and instructions with various addressing modes.
+An implementation of a two pass assembler, that converts code written in assembly to machine code. The assembly language used is x86-like - it supports sections, directives and instructions with various addressing modes.
 
 ## Some important notes
 * the project is compiled using `g++` and tested on ubuntu
